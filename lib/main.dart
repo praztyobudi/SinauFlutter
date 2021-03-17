@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihanflutter/login.dart';
 
 // void main() {
 //   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Selamat Datang"),
         ),
-        body: MainPage(),
+        body: LoginPage(),
       ),
     );
   }
