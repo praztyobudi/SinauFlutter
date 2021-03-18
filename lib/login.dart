@@ -10,47 +10,52 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(30.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 20),
-              child: TextField(
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Insert Number',
-                  helperText: 'Information Number',
-                  labelText: 'Number',
+        body: Form(
+      child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.list),
+                    hintText: 'Insert Number',
+                    helperText: 'Information Number',
+                    labelText: 'Number',
+                  ),
                 ),
               ),
-            ),
-            Container(
-              child: TextField(
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: 'Insert Date of birth',
-                  helperText: 'Information Date of birth',
-                  labelText: 'Date of birth',
+              Container(
+                padding: const EdgeInsets.only(top: 15),
+                child: TextField(
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.calendar_today_sharp),
+                    hintText: 'Insert Date of birth',
+                    helperText: 'Information Date of birth',
+                    labelText: 'Date of birth',
+                  ),
                 ),
               ),
-            ),
-            ButtonBar(
-              children: <Widget>[
-                ElevatedButton.icon(
-                    onPressed: () {
-                      print('tombol');
-                    },
-                    icon: Icon(Icons.login),
-                    label: Text('sentuh'))
-              ],
-            ),
-          ],
+              Container(
+                padding: const EdgeInsets.only(top: 15),
+                child: FlatButton(
+                  onPressed: () {},
+                  child: Text('Login'),
+                  splashColor: Colors.white,
+                  textColor: Colors.white,
+                  color: Colors.lightBlue,
+                ),
+              )
+            ],
+          ),
         ),
       ),
-    );
+    ));
   }
 }
