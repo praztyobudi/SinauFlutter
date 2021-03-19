@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihanflutter/page1.dart';
 // import 'package:flutter/services.dart';
 
 class LoginPage extends StatefulWidget {
@@ -44,8 +45,16 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                 padding: const EdgeInsets.only(top: 15),
+                // ignore: deprecated_member_use
                 child: FlatButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    // Navigator.of(context)
+                    //     .push(MaterialPageRoute(builder: (context) => Page1()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Page1())); //tanpa history
+                  },
                   child: Text('Login'),
                   splashColor: Colors.white,
                   textColor: Colors.white,

@@ -4,22 +4,7 @@ import 'package:latihanflutter/login.dart';
 // void main() {
 //   runApp(MyApp());
 // }
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false, //menghilangkan banner debug
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Selamat Datang"),
-        ),
-        body: LoginPage(),
-      ),
-    );
-  }
-}
+void main() => runApp(MainPage());
 
 class MainPage extends StatefulWidget {
   @override
@@ -52,20 +37,18 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
     if (state == AppLifecycleState.resumed) {
       print("====>RESUME<====");
     }
+    if (state == AppLifecycleState.detached) {
+      print("====>DETACTED<====");
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Aplikasi State"),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false, //menghilangkan banner debug
+      home: Scaffold(
+        body: LoginPage(),
       ),
-      body: Center(
-          child: Container(
-              color: Colors.red[700],
-              width: 150,
-              height: 50,
-              child: Center(child: Text("Ini Body")))),
     );
   }
 }
