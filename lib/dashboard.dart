@@ -1,7 +1,8 @@
 import 'dart:ffi';
 
 import 'package:flutter/material.dart';
-import 'package:latihanflutter/content_1.dart';
+import 'package:latihanflutter/content/content_1.dart';
+import 'package:latihanflutter/content/test.dart';
 
 class Page1 extends StatefulWidget {
   @override
@@ -11,7 +12,8 @@ class Page1 extends StatefulWidget {
 class _Page1State extends State<Page1> {
   int _pilihIndex = 0; //pengisian nilai awal
   List<Widget> _isiList = <Widget>[
-    Text('Home'), //0
+    Test(),
+    // Text('Home'), //0
     Text('Message'), //1
     Text('Profile'), //2
     Content1(), //3

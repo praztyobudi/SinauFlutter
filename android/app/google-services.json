@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "476737130582",
+    "project_id": "autentikasi-3089e",
+    "storage_bucket": "autentikasi-3089e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476737130582:android:f2ba5b93f1c6d173a0ebf7",
+        "android_client_info": {
+          "package_name": "com.example.latihanflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476737130582-83bf96vn6s4kqukee99nu6gua3kannrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxeKOGldYX-axWWK8BIoKpotOkNcd_kvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476737130582-83bf96vn6s4kqukee99nu6gua3kannrg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

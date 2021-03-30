@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:latihanflutter/dashboard.dart';
 import 'package:latihanflutter/login.dart';
 
 // void main() {
@@ -46,9 +47,10 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //menghilangkan banner debug
-      home: Scaffold(
-        body: LoginPage(),
-      ),
+      routes: {
+        '/': (context) => LoginPage(),
+        // '/dashboard': (context) => Page1()
+      },
     );
   }
 }
