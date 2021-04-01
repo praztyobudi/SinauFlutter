@@ -57,7 +57,7 @@ class _HomeState extends State<Home> {
               margin: EdgeInsets.only(top: screenSize.blockVertical * 8),
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: 200.0,
+                  height: screenSize.blockHorizontal * 60,
                   aspectRatio: 20,
                   viewportFraction: 1.0,
                   disableCenter: true,
@@ -72,9 +72,10 @@ class _HomeState extends State<Home> {
                     builder: (BuildContext context) {
                       return Container(
                         width: MediaQuery.of(context).size.width,
-                        margin: EdgeInsets.symmetric(horizontal: 5),
+                        margin: EdgeInsets.symmetric(
+                            horizontal: screenSize.blockHorizontal * 2),
                         decoration: BoxDecoration(
-                            color: Colors.amber,
+                            color: Colors.black,
                             borderRadius: BorderRadius.circular(10)),
                         child: Stack(
                           children: [
@@ -90,13 +91,21 @@ class _HomeState extends State<Home> {
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                top: 100,
-                                right: 180,
+                                top: screenSize.blockVertical * 20,
+                                right: screenSize.blockHorizontal * 50,
                               ),
                               child: Container(
-                                alignment: Alignment.centerLeft,
-                                padding: EdgeInsets.only(left: 20, top: 10),
-                                margin: EdgeInsets.only(bottom: 20, top: 20),
+                                // alignment: Alignment.centerLeft,
+                                // padding: EdgeInsets.only(left: 20, top: 10),
+                                // margin: EdgeInsets.only(bottom: 20, top: 20),
+                                padding: EdgeInsets.only(
+                                    left: screenSize.blockHorizontal * 4,
+                                    top: screenSize.blockVertical * 1,
+                                    right: screenSize.blockHorizontal * 1),
+
+                                margin: EdgeInsets.symmetric(
+                                    vertical: screenSize.blockVertical * 2),
+
                                 decoration: BoxDecoration(
                                     color: Color.fromRGBO(23, 32, 42, 99)),
                                 child: Column(
