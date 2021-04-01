@@ -16,11 +16,11 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  @override
-  void initState() {
-    super.initState();
-    StatusBar.color(Color.fromRGBO(18, 99, 221, 1.0));
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   StatusBar.color(Color.fromRGBO(18, 99, 221, 1.0));
+  // }
 
   @override
   Widget build(BuildContext context) {
