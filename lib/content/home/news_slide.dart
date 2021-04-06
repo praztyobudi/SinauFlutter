@@ -60,7 +60,7 @@ class _NewsSlideState extends State<NewsSlide> {
                     width: MediaQuery.of(context).size.width,
                     margin: EdgeInsets.symmetric(
                         horizontal: screenSize.blockHorizontal * 5,
-                        vertical: screenSize.blockVertical * 2),
+                        vertical: screenSize.blockVertical * 1),
                     padding: EdgeInsets.only(top: screenSize.blockVertical * 1),
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -93,7 +93,8 @@ class _NewsSlideState extends State<NewsSlide> {
                             Container(
                               alignment: Alignment.centerLeft,
                               padding: EdgeInsets.only(
-                                  left: screenSize.blockHorizontal * 2),
+                                  left: screenSize.blockHorizontal * 2,
+                                  top: screenSize.blockVertical * 1.2),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [

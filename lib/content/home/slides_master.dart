@@ -73,7 +73,8 @@ class _HomeState extends State<Home> {
                       return Container(
                         width: MediaQuery.of(context).size.width,
                         margin: EdgeInsets.symmetric(
-                            horizontal: screenSize.blockHorizontal * 2),
+                            horizontal: screenSize.blockHorizontal * 2,
+                            vertical: screenSize.blockVertical * 1),
                         decoration: BoxDecoration(
                             color: Colors.black,
                             borderRadius: BorderRadius.circular(10)),
@@ -91,7 +92,7 @@ class _HomeState extends State<Home> {
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                top: screenSize.blockVertical * 20,
+                                top: screenSize.blockVertical * 18,
                                 right: screenSize.blockHorizontal * 50,
                               ),
                               child: Container(
