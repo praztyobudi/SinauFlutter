@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-class screenSize {
+class ScreenSize {
   static MediaQueryData _mediaQueryData;
   static double screenWidth;
   static double screenHight;

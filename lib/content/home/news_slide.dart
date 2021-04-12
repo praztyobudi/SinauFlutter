@@ -29,11 +29,11 @@ class _NewsSlideState extends State<NewsSlide> {
         Container(
           alignment: AlignmentDirectional.centerStart,
           margin: EdgeInsets.symmetric(
-            horizontal: screenSize.blockHorizontal * 5,
+            horizontal: ScreenSize.blockHorizontal * 5,
           ),
           child: Text(
             'Berita Terbaru',
-            style: TextStyle(
+            style: GoogleFonts.openSans(
               color: Colors.white,
               fontStyle: FontStyle.normal,
               fontSize: 20,
@@ -41,10 +41,10 @@ class _NewsSlideState extends State<NewsSlide> {
           ),
         ),
         Container(
-          margin: EdgeInsets.only(top: screenSize.blockVertical * 47),
+          margin: EdgeInsets.only(top: ScreenSize.blockVertical * 48),
           child: CarouselSlider(
             options: CarouselOptions(
-              height: screenSize.blockVertical * 15,
+              height: ScreenSize.blockVertical * 15,
               aspectRatio: 20,
               viewportFraction: 1.0,
               disableCenter: true,
@@ -59,9 +59,9 @@ class _NewsSlideState extends State<NewsSlide> {
                   return Container(
                     width: MediaQuery.of(context).size.width,
                     margin: EdgeInsets.symmetric(
-                        horizontal: screenSize.blockHorizontal * 5,
-                        vertical: screenSize.blockVertical * 1),
-                    padding: EdgeInsets.only(top: screenSize.blockVertical * 1),
+                        horizontal: ScreenSize.blockHorizontal * 5,
+                        vertical: ScreenSize.blockVertical * 1),
+                    padding: EdgeInsets.only(top: ScreenSize.blockVertical * 1),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -79,8 +79,8 @@ class _NewsSlideState extends State<NewsSlide> {
                       children: [
                         Padding(
                           padding: EdgeInsets.only(
-                            bottom: screenSize.blockVertical * 1,
-                            left: screenSize.blockHorizontal * 4,
+                            bottom: ScreenSize.blockVertical * 1,
+                            left: ScreenSize.blockHorizontal * 4,
                           ),
                           child: Icon(
                             Icons.error_outline,
@@ -93,14 +93,14 @@ class _NewsSlideState extends State<NewsSlide> {
                             Container(
                               alignment: Alignment.centerLeft,
                               padding: EdgeInsets.only(
-                                  left: screenSize.blockHorizontal * 2,
-                                  top: screenSize.blockVertical * 1.2),
+                                  left: ScreenSize.blockHorizontal * 2,
+                                  top: ScreenSize.blockVertical * 1.2),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
                                     margin: EdgeInsets.only(
-                                        bottom: screenSize.blockVertical * 1),
+                                        bottom: ScreenSize.blockVertical * 1),
                                     child: Text(i[0],
                                         maxLines: 1,
                                         style: TextStyle(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:latihanflutter/dashboard.dart';
 import 'package:latihanflutter/login.dart';
 
 // void main() {

@@ -14,8 +14,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  @override
-  int _currentIndex = 0;
+  // int _currentIndex = 0;
   List cardList = [
     [
       'assets/images/slide/slide1.jpg',
@@ -49,15 +48,16 @@ class _HomeState extends State<Home> {
         body: Stack(
           children: [
             Container(
-              color: Color.fromRGBO(8, 47, 107, 1),
-              height: screenSize.blockVertical * 55,
-              width: screenSize.blockHorizontal * 100,
+              // color: Color.fromRGBO(8, 47, 107, 1),
+              color: Colors.blue[600],
+              height: ScreenSize.blockVertical * 55,
+              width: ScreenSize.blockHorizontal * 100,
             ),
             Container(
-              margin: EdgeInsets.only(top: screenSize.blockVertical * 8),
+              margin: EdgeInsets.only(top: ScreenSize.blockVertical * 8),
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: screenSize.blockHorizontal * 60,
+                  height: ScreenSize.blockHorizontal * 60,
                   aspectRatio: 20,
                   viewportFraction: 1.0,
                   disableCenter: true,
@@ -73,8 +73,8 @@ class _HomeState extends State<Home> {
                       return Container(
                         width: MediaQuery.of(context).size.width,
                         margin: EdgeInsets.symmetric(
-                            horizontal: screenSize.blockHorizontal * 2,
-                            vertical: screenSize.blockVertical * 1),
+                            horizontal: ScreenSize.blockHorizontal * 2,
+                            vertical: ScreenSize.blockVertical * 1),
                         decoration: BoxDecoration(
                             color: Colors.black,
                             borderRadius: BorderRadius.circular(10)),
@@ -86,26 +86,26 @@ class _HomeState extends State<Home> {
                                 i[0],
                                 fit: BoxFit.cover,
                                 alignment: AlignmentDirectional.center,
-                                height: screenSize.blockVertical * 40,
-                                width: screenSize.blockHorizontal * 100,
+                                height: ScreenSize.blockVertical * 40,
+                                width: ScreenSize.blockHorizontal * 100,
                               ),
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                top: screenSize.blockVertical * 18,
-                                right: screenSize.blockHorizontal * 50,
+                                top: ScreenSize.blockVertical * 18,
+                                right: ScreenSize.blockHorizontal * 50,
                               ),
                               child: Container(
                                 // alignment: Alignment.centerLeft,
                                 // padding: EdgeInsets.only(left: 20, top: 10),
                                 // margin: EdgeInsets.only(bottom: 20, top: 20),
                                 padding: EdgeInsets.only(
-                                    left: screenSize.blockHorizontal * 4,
-                                    top: screenSize.blockVertical * 1,
-                                    right: screenSize.blockHorizontal * 1),
+                                    left: ScreenSize.blockHorizontal * 4,
+                                    top: ScreenSize.blockVertical * 1,
+                                    right: ScreenSize.blockHorizontal * 1),
 
                                 margin: EdgeInsets.symmetric(
-                                    vertical: screenSize.blockVertical * 2),
+                                    vertical: ScreenSize.blockVertical * 2),
 
                                 decoration: BoxDecoration(
                                     color: Color.fromRGBO(23, 32, 42, 99)),

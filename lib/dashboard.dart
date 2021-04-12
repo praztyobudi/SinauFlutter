@@ -1,9 +1,8 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:latihanflutter/content/content_1.dart';
 import 'package:latihanflutter/content/home/slides_master.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:latihanflutter/content/news/news_master.dart';
 
 class Page1 extends StatefulWidget {
   @override
@@ -14,13 +13,13 @@ class _Page1State extends State<Page1> {
   int _pilihIndex = 0; //pengisian nilai awal
   List<Widget> _isiList = <Widget>[
     Home(), //0
-    Text('News'), //1
+    News(), //1
     Text('Message'), //2
     Text('Profile'), //3
     Content1(), //4
   ]; //list sesuai urutan _pilihIndex
 
-  Void _onItemTap(int index) {
+  void _onItemTap(int index) {
     //nilai int dimasukkan index
     setState(() {
       _pilihIndex = index;

@@ -25,7 +25,7 @@ class _Content1State extends State<Content1> {
                   "|" +
                   isiPost.created
               : "Kosong"),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () {
               IsiPost.koneksiKeAPI("Badu", "guru").then((value) {
                 isiPost = value;

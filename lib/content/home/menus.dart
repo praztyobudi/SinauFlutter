@@ -13,78 +13,341 @@ class _MenusState extends State<Menus> {
     return Stack(
       children: [
         Container(
-          alignment: Alignment.bottomCenter,
-          margin: EdgeInsets.symmetric(
-            horizontal: screenSize.blockHorizontal * 5,
-            vertical: screenSize.blockVertical * 5,
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Container(
-                height: screenSize.blockVertical * 22,
-                width: screenSize.blockHorizontal * 41,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.person_pin_sharp,
-                      size: 70,
-                      color: Colors.blue[900],
-                    ),
-                    Text('Pasien',
-                        style: GoogleFonts.openSans(
-                          fontSize: 18,
-                        )),
-                  ],
-                ),
+          child: DraggableScrollableSheet(
+            initialChildSize: 0.4,
+            minChildSize: 0.4,
+            maxChildSize: 1,
+            builder: (BuildContext context, myController) {
+              return Container(
+                margin: EdgeInsets.only(top: ScreenSize.blockVertical * 8),
                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20)),
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      spreadRadius: 1,
-                      blurRadius: 2,
-                      offset: Offset(0, 2), //x,y
-                    )
-                  ],
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: screenSize.blockHorizontal * 8),
-                height: screenSize.blockVertical * 22,
-                width: screenSize.blockHorizontal * 41,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.calendar_today,
-                      size: 70,
-                      color: Colors.blue[900],
-                    ),
-                    Text('Jadwal Dokter',
-                        style: GoogleFonts.openSans(
-                          fontSize: 18,
-                        )),
-                  ],
+                child: SingleChildScrollView(
+                  controller: myController,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // Container(
+                      //   alignment: AlignmentDirectional.centerStart,
+                      //   margin: EdgeInsets.only(
+                      //       top: ScreenSize.blockVertical * 2,
+                      //       left: ScreenSize.blockHorizontal * 5),
+                      //   child: Text(
+                      //     'Layanan Kami',
+                      //     style: GoogleFonts.openSans(
+                      //       color: Colors.black54,
+                      //       fontStyle: FontStyle.normal,
+                      //       fontSize: 20,
+                      //     ),
+                      //   ),
+                      // ),
+                      Container(
+                        alignment: Alignment.topCenter,
+                        margin: EdgeInsets.symmetric(
+                          horizontal: ScreenSize.blockHorizontal * 5,
+                          vertical: ScreenSize.blockVertical * 3,
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: ScreenSize.blockVertical * 20,
+                              width: ScreenSize.blockHorizontal * 41,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.person_pin_sharp,
+                                    size: 70,
+                                    color: Colors.blue[600],
+                                  ),
+                                  Text('Pasien',
+                                      style: GoogleFonts.openSans(
+                                        fontSize: 18,
+                                      )),
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 2,
+                                    offset: Offset(0, 2), //x,y
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                  left: ScreenSize.blockHorizontal * 8),
+                              height: ScreenSize.blockVertical * 20,
+                              width: ScreenSize.blockHorizontal * 41,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.calendar_today,
+                                    size: 70,
+                                    color: Colors.blue[600],
+                                  ),
+                                  Text('Jadwal Dokter',
+                                      style: GoogleFonts.openSans(
+                                        fontSize: 18,
+                                      )),
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 2,
+                                    offset: Offset(0, 2), //x,y
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.topCenter,
+                        margin: EdgeInsets.only(
+                          left: ScreenSize.blockHorizontal * 5,
+                          top: ScreenSize.blockVertical * 3,
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: ScreenSize.blockVertical * 15,
+                              width: ScreenSize.blockHorizontal * 41,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.query_builder,
+                                    size: 70,
+                                    color: Colors.blue[600],
+                                  ),
+                                  Text('Antrian Pasien',
+                                      style: GoogleFonts.openSans(
+                                        fontSize: 18,
+                                      )),
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 2,
+                                    offset: Offset(0, 2), //x,y
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                  left: ScreenSize.blockHorizontal * 8),
+                              height: ScreenSize.blockVertical * 15,
+                              width: ScreenSize.blockHorizontal * 41,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.bathtub_rounded,
+                                    size: 70,
+                                    color: Colors.blue[600],
+                                  ),
+                                  Text('Cek Kamar',
+                                      style: GoogleFonts.openSans(
+                                        fontSize: 18,
+                                      )),
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 2,
+                                    offset: Offset(0, 2), //x,y
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.topCenter,
+                        margin: EdgeInsets.only(
+                          left: ScreenSize.blockHorizontal * 5,
+                          top: ScreenSize.blockVertical * 3,
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: ScreenSize.blockVertical * 15,
+                              width: ScreenSize.blockHorizontal * 41,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.help_center_rounded,
+                                    size: 70,
+                                    color: Colors.blue[600],
+                                  ),
+                                  Text('Bantuan',
+                                      style: GoogleFonts.openSans(
+                                        fontSize: 18,
+                                      )),
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 2,
+                                    offset: Offset(0, 2), //x,y
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                  left: ScreenSize.blockHorizontal * 8),
+                              height: ScreenSize.blockVertical * 15,
+                              width: ScreenSize.blockHorizontal * 41,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.saved_search,
+                                    size: 70,
+                                    color: Colors.blue[600],
+                                  ),
+                                  Text('Survey',
+                                      style: GoogleFonts.openSans(
+                                        fontSize: 18,
+                                      )),
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 2,
+                                    offset: Offset(0, 2), //x,y
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.topCenter,
+                        margin: EdgeInsets.only(
+                          left: ScreenSize.blockHorizontal * 5,
+                          top: ScreenSize.blockVertical * 3,
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              height: ScreenSize.blockVertical * 15,
+                              width: ScreenSize.blockHorizontal * 41,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.tag_faces,
+                                    size: 70,
+                                    color: Colors.blue[600],
+                                  ),
+                                  Text('Tips Kesehatan',
+                                      style: GoogleFonts.openSans(
+                                        fontSize: 18,
+                                      )),
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 2,
+                                    offset: Offset(0, 2), //x,y
+                                  )
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                  left: ScreenSize.blockHorizontal * 8),
+                              height: ScreenSize.blockVertical * 15,
+                              width: ScreenSize.blockHorizontal * 41,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.accessibility_new_sharp,
+                                    size: 70,
+                                    color: Colors.blue[600],
+                                  ),
+                                  Text('Lain-Lain',
+                                      style: GoogleFonts.openSans(
+                                        fontSize: 18,
+                                      )),
+                                ],
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    spreadRadius: 1,
+                                    blurRadius: 2,
+                                    offset: Offset(0, 2), //x,y
+                                  )
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      spreadRadius: 1,
-                      blurRadius: 2,
-                      offset: Offset(0, 2), //x,y
-                    )
-                  ],
-                ),
-              ),
-            ],
+              );
+            },
           ),
-        )
+        ),
       ],
     );
   }

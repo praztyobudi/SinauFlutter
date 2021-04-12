@@ -31,7 +31,7 @@ class IsiPost {
     var response = await http.post(Uri.parse("https://reqres.in/api/users"),
         body: {"nama": name, "pekerjaan": job});
     var hasilAPI = response;
-    var ObjekJson = json.decode(hasilAPI.body);
-    return IsiPost.createIsiPost(ObjekJson);
+    var objekJson = json.decode(hasilAPI.body);
+    return IsiPost.createIsiPost(objekJson);
   }
 }

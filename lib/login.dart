@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:latihanflutter/src/screensize.dart';
 import 'package:date_time_picker/date_time_picker.dart';
 import 'package:latihanflutter/dashboard.dart';
-import 'package:statusbar/statusbar.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -24,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    screenSize().init(context);
+    ScreenSize().init(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -36,8 +35,8 @@ class _LoginPageState extends State<LoginPage> {
                   BoxDecoration(color: Color.fromRGBO(18, 99, 221, 1.0)),
               child: Container(
                 //gambar
-                height: screenSize.blockVertical * 70,
-                width: screenSize.blockHorizontal * 100,
+                height: ScreenSize.blockVertical * 70,
+                width: ScreenSize.blockHorizontal * 100,
                 decoration: BoxDecoration(
                   color: Color.fromRGBO(8, 47, 107, 1),
                   image: DecorationImage(
@@ -55,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
                 margin: EdgeInsetsDirectional.only(
-                    bottom: screenSize.blockVertical * 35),
+                    bottom: ScreenSize.blockVertical * 35),
               ),
             ),
             Stack(
@@ -63,9 +62,9 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Center(
                   child: Container(
-                    height: screenSize.blockVertical * 53,
-                    width: screenSize.blockHorizontal * 80,
-                    margin: EdgeInsets.only(top: screenSize.blockVertical * 20),
+                    height: ScreenSize.blockVertical * 53,
+                    width: ScreenSize.blockHorizontal * 80,
+                    margin: EdgeInsets.only(top: ScreenSize.blockVertical * 20),
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
@@ -81,7 +80,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Container(
                   margin:
-                      EdgeInsets.only(bottom: screenSize.blockVertical * 18),
+                      EdgeInsets.only(bottom: ScreenSize.blockVertical * 18),
                   child: Text(
                     'Nomor ARM',
                     style: GoogleFonts.openSans(
@@ -93,9 +92,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Container(
                   margin: EdgeInsets.only(
-                      bottom: screenSize.blockVertical * 1,
-                      left: screenSize.blockHorizontal * 18,
-                      right: screenSize.blockHorizontal * 18),
+                      bottom: ScreenSize.blockVertical * 1,
+                      left: ScreenSize.blockHorizontal * 18,
+                      right: ScreenSize.blockHorizontal * 18),
                   child: TextField(
                     maxLength: max(16, 16),
                     keyboardType: TextInputType.number,
@@ -107,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: screenSize.blockVertical * 16),
+                  margin: EdgeInsets.only(top: ScreenSize.blockVertical * 16),
                   child: Text(
                     'Masukkan tanggal lahir',
                     style: GoogleFonts.openSans(
@@ -119,9 +118,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Container(
                   margin: EdgeInsets.only(
-                      top: screenSize.blockVertical * 30,
-                      left: screenSize.blockHorizontal * 18,
-                      right: screenSize.blockHorizontal * 18),
+                      top: ScreenSize.blockVertical * 30,
+                      left: ScreenSize.blockHorizontal * 18,
+                      right: ScreenSize.blockHorizontal * 18),
                   child: DateTimePicker(
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
@@ -153,7 +152,7 @@ class _LoginPageState extends State<LoginPage> {
                 Container(
                   alignment: AlignmentDirectional.center,
                   margin: EdgeInsetsDirectional.only(
-                    top: screenSize.blockVertical * 55,
+                    top: ScreenSize.blockVertical * 55,
                   ),
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
@@ -161,8 +160,8 @@ class _LoginPageState extends State<LoginPage> {
                         onPrimary: Colors.white,
                         elevation: 2.0,
                         padding: EdgeInsets.symmetric(
-                            horizontal: screenSize.blockHorizontal * 28,
-                            vertical: screenSize.blockVertical * 2),
+                            horizontal: ScreenSize.blockHorizontal * 28,
+                            vertical: ScreenSize.blockVertical * 2),
                       ),
                       onPressed: () {
                         Navigator.of(context).push(
@@ -181,7 +180,7 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Container(
                   alignment: Alignment.topCenter,
-                  margin: EdgeInsets.only(top: screenSize.blockVertical * 20),
+                  margin: EdgeInsets.only(top: ScreenSize.blockVertical * 20),
                   child: Text('APM',
                       style: GoogleFonts.openSans(
                         fontSize: 50,
@@ -202,9 +201,9 @@ class _LoginPageState extends State<LoginPage> {
             Container(
               alignment: Alignment.bottomCenter,
               margin: EdgeInsets.only(
-                  bottom: screenSize.blockVertical * 5,
-                  right: screenSize.blockVertical * 5,
-                  left: screenSize.blockVertical * 5),
+                  bottom: ScreenSize.blockVertical * 5,
+                  right: ScreenSize.blockVertical * 5,
+                  left: ScreenSize.blockVertical * 5),
               child: Text(
                   "Don't have an RM number? you can still log in without logging in by selecting Skip.",
                   textAlign: TextAlign.center,
@@ -218,8 +217,8 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(
-                      top: screenSize.blockVertical * 5,
-                      left: screenSize.blockHorizontal * 82),
+                      top: ScreenSize.blockVertical * 5,
+                      left: ScreenSize.blockHorizontal * 82),
                   child: Text(
                     'Skip',
                     style: GoogleFonts.openSans(
@@ -230,7 +229,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: screenSize.blockVertical * 5,
+                    top: ScreenSize.blockVertical * 5,
                   ),
                   child: Icon(
                     Icons.arrow_forward_ios_outlined,
@@ -242,7 +241,7 @@ class _LoginPageState extends State<LoginPage> {
             )
             // Container(
             //   alignment: AlignmentDirectional.topEnd,
-            //   margin: EdgeInsets.only(top: screenSize.blockVertical * 5),
+            //   margin: EdgeInsets.only(top: ScreenSize.blockVertical * 5),
             //   child: Text(
             //     "Skip ${Icons.arrow_forward}",
             //     style: GoogleFonts.openSans(
