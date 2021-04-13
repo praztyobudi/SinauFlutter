@@ -29,7 +29,8 @@ dependencies:
   statusbar: ^1.1.0
   convex_bottom_bar: ^3.0.0
   carousel_slider: ^3.0.0
-  sliding_up_panel: ^1.0.2
+  persistent_bottom_nav_bar: ^4.0.2
+ 
   
 
 

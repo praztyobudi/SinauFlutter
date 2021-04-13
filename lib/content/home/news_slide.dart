@@ -31,17 +31,19 @@ class _NewsSlideState extends State<NewsSlide> {
           margin: EdgeInsets.symmetric(
             horizontal: ScreenSize.blockHorizontal * 5,
           ),
+          padding: EdgeInsets.only(bottom: ScreenSize.blockVertical * 2),
           child: Text(
             'Berita Terbaru',
             style: GoogleFonts.openSans(
               color: Colors.white,
               fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
               fontSize: 20,
             ),
           ),
         ),
         Container(
-          margin: EdgeInsets.only(top: ScreenSize.blockVertical * 48),
+          margin: EdgeInsets.only(top: ScreenSize.blockVertical * 47),
           child: CarouselSlider(
             options: CarouselOptions(
               height: ScreenSize.blockVertical * 15,

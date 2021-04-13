@@ -48,16 +48,20 @@ class _HomeState extends State<Home> {
         body: Stack(
           children: [
             Container(
+              decoration: BoxDecoration(
+                borderRadius:
+                    BorderRadius.only(bottomRight: Radius.circular(40)),
+                color: Colors.blue[600],
+              ),
               // color: Color.fromRGBO(8, 47, 107, 1),
-              color: Colors.blue[600],
               height: ScreenSize.blockVertical * 55,
               width: ScreenSize.blockHorizontal * 100,
             ),
             Container(
-              margin: EdgeInsets.only(top: ScreenSize.blockVertical * 8),
+              margin: EdgeInsets.only(top: ScreenSize.blockVertical * 5.5),
               child: CarouselSlider(
                 options: CarouselOptions(
-                  height: ScreenSize.blockHorizontal * 60,
+                  height: ScreenSize.blockHorizontal * 65,
                   aspectRatio: 20,
                   viewportFraction: 1.0,
                   disableCenter: true,
@@ -92,7 +96,7 @@ class _HomeState extends State<Home> {
                             ),
                             Padding(
                               padding: EdgeInsets.only(
-                                top: ScreenSize.blockVertical * 18,
+                                top: ScreenSize.blockVertical * 21,
                                 right: ScreenSize.blockHorizontal * 50,
                               ),
                               child: Container(
@@ -106,7 +110,6 @@ class _HomeState extends State<Home> {
 
                                 margin: EdgeInsets.symmetric(
                                     vertical: ScreenSize.blockVertical * 2),
-
                                 decoration: BoxDecoration(
                                     color: Color.fromRGBO(23, 32, 42, 99)),
                                 child: Column(

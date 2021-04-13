@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:latihanflutter/src/screensize.dart';
+import 'package:flutter/cupertino.dart';
 
 class Menus extends StatefulWidget {
   @override
@@ -19,7 +20,7 @@ class _MenusState extends State<Menus> {
             maxChildSize: 1,
             builder: (BuildContext context, myController) {
               return Container(
-                margin: EdgeInsets.only(top: ScreenSize.blockVertical * 8),
+                margin: EdgeInsets.only(top: ScreenSize.blockVertical * 7),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
@@ -31,43 +32,51 @@ class _MenusState extends State<Menus> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Container(
-                      //   alignment: AlignmentDirectional.centerStart,
-                      //   margin: EdgeInsets.only(
-                      //       top: ScreenSize.blockVertical * 2,
-                      //       left: ScreenSize.blockHorizontal * 5),
-                      //   child: Text(
-                      //     'Layanan Kami',
-                      //     style: GoogleFonts.openSans(
-                      //       color: Colors.black54,
-                      //       fontStyle: FontStyle.normal,
-                      //       fontSize: 20,
-                      //     ),
-                      //   ),
-                      // ),
+                      Container(
+                        alignment: AlignmentDirectional.centerStart,
+                        margin: EdgeInsets.only(
+                            top: ScreenSize.blockVertical * 2,
+                            left: ScreenSize.blockHorizontal * 5),
+                        child: Text(
+                          'Layanan Kami',
+                          style: GoogleFonts.openSans(
+                            color: Colors.black54,
+                            fontStyle: FontStyle.normal,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
                       Container(
                         alignment: Alignment.topCenter,
-                        margin: EdgeInsets.symmetric(
-                          horizontal: ScreenSize.blockHorizontal * 5,
-                          vertical: ScreenSize.blockVertical * 3,
+                        margin: EdgeInsets.only(
+                          left: ScreenSize.blockHorizontal * 5,
+                          top: ScreenSize.blockVertical * 3,
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              height: ScreenSize.blockVertical * 20,
-                              width: ScreenSize.blockHorizontal * 41,
+                              height: ScreenSize.blockVertical * 19,
+                              width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.person_pin_sharp,
-                                    size: 70,
-                                    color: Colors.blue[600],
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: ScreenSize.blockVertical * 2),
+                                    child: Icon(
+                                      CupertinoIcons.person_crop_circle,
+                                      size: 50,
+                                      color: Colors.blue[600],
+                                    ),
                                   ),
                                   Text('Pasien',
                                       style: GoogleFonts.openSans(
                                         fontSize: 18,
+                                        color: Colors.black54,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.bold,
                                       )),
                                 ],
                               ),
@@ -86,20 +95,27 @@ class _MenusState extends State<Menus> {
                             ),
                             Container(
                               margin: EdgeInsets.only(
-                                  left: ScreenSize.blockHorizontal * 8),
-                              height: ScreenSize.blockVertical * 20,
-                              width: ScreenSize.blockHorizontal * 41,
+                                  left: ScreenSize.blockHorizontal * 6),
+                              height: ScreenSize.blockVertical * 19,
+                              width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.calendar_today,
-                                    size: 70,
-                                    color: Colors.blue[600],
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: ScreenSize.blockVertical * 2),
+                                    child: Icon(
+                                      CupertinoIcons.calendar_today,
+                                      size: 50,
+                                      color: Colors.blue[600],
+                                    ),
                                   ),
                                   Text('Jadwal Dokter',
                                       style: GoogleFonts.openSans(
                                         fontSize: 18,
+                                        color: Colors.black54,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.bold,
                                       )),
                                 ],
                               ),
@@ -130,18 +146,25 @@ class _MenusState extends State<Menus> {
                           children: [
                             Container(
                               height: ScreenSize.blockVertical * 15,
-                              width: ScreenSize.blockHorizontal * 41,
+                              width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.query_builder,
-                                    size: 70,
-                                    color: Colors.blue[600],
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: ScreenSize.blockVertical * 2),
+                                    child: Icon(
+                                      Icons.query_builder,
+                                      size: 40,
+                                      color: Colors.blue[600],
+                                    ),
                                   ),
                                   Text('Antrian Pasien',
                                       style: GoogleFonts.openSans(
                                         fontSize: 18,
+                                        color: Colors.black54,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.bold,
                                       )),
                                 ],
                               ),
@@ -160,20 +183,27 @@ class _MenusState extends State<Menus> {
                             ),
                             Container(
                               margin: EdgeInsets.only(
-                                  left: ScreenSize.blockHorizontal * 8),
+                                  left: ScreenSize.blockHorizontal * 6),
                               height: ScreenSize.blockVertical * 15,
-                              width: ScreenSize.blockHorizontal * 41,
+                              width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.bathtub_rounded,
-                                    size: 70,
-                                    color: Colors.blue[600],
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: ScreenSize.blockVertical * 2),
+                                    child: Icon(
+                                      Icons.bathtub_rounded,
+                                      size: 40,
+                                      color: Colors.blue[600],
+                                    ),
                                   ),
                                   Text('Cek Kamar',
                                       style: GoogleFonts.openSans(
                                         fontSize: 18,
+                                        color: Colors.black54,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.bold,
                                       )),
                                 ],
                               ),
@@ -204,18 +234,25 @@ class _MenusState extends State<Menus> {
                           children: [
                             Container(
                               height: ScreenSize.blockVertical * 15,
-                              width: ScreenSize.blockHorizontal * 41,
+                              width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.help_center_rounded,
-                                    size: 70,
-                                    color: Colors.blue[600],
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: ScreenSize.blockVertical * 2),
+                                    child: Icon(
+                                      Icons.help_center_rounded,
+                                      size: 40,
+                                      color: Colors.blue[600],
+                                    ),
                                   ),
                                   Text('Bantuan',
                                       style: GoogleFonts.openSans(
                                         fontSize: 18,
+                                        color: Colors.black54,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.bold,
                                       )),
                                 ],
                               ),
@@ -234,20 +271,27 @@ class _MenusState extends State<Menus> {
                             ),
                             Container(
                               margin: EdgeInsets.only(
-                                  left: ScreenSize.blockHorizontal * 8),
+                                  left: ScreenSize.blockHorizontal * 6),
                               height: ScreenSize.blockVertical * 15,
-                              width: ScreenSize.blockHorizontal * 41,
+                              width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.saved_search,
-                                    size: 70,
-                                    color: Colors.blue[600],
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: ScreenSize.blockVertical * 2),
+                                    child: Icon(
+                                      Icons.saved_search,
+                                      size: 40,
+                                      color: Colors.blue[600],
+                                    ),
                                   ),
                                   Text('Survey',
                                       style: GoogleFonts.openSans(
                                         fontSize: 18,
+                                        color: Colors.black54,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.bold,
                                       )),
                                 ],
                               ),
@@ -278,18 +322,25 @@ class _MenusState extends State<Menus> {
                           children: [
                             Container(
                               height: ScreenSize.blockVertical * 15,
-                              width: ScreenSize.blockHorizontal * 41,
+                              width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.tag_faces,
-                                    size: 70,
-                                    color: Colors.blue[600],
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: ScreenSize.blockVertical * 2),
+                                    child: Icon(
+                                      Icons.tag_faces,
+                                      size: 40,
+                                      color: Colors.blue[600],
+                                    ),
                                   ),
                                   Text('Tips Kesehatan',
                                       style: GoogleFonts.openSans(
                                         fontSize: 18,
+                                        color: Colors.black54,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.bold,
                                       )),
                                 ],
                               ),
@@ -308,20 +359,27 @@ class _MenusState extends State<Menus> {
                             ),
                             Container(
                               margin: EdgeInsets.only(
-                                  left: ScreenSize.blockHorizontal * 8),
+                                  left: ScreenSize.blockHorizontal * 6),
                               height: ScreenSize.blockVertical * 15,
-                              width: ScreenSize.blockHorizontal * 41,
+                              width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
-                                    Icons.accessibility_new_sharp,
-                                    size: 70,
-                                    color: Colors.blue[600],
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                        bottom: ScreenSize.blockVertical * 2),
+                                    child: Icon(
+                                      Icons.accessibility_new_sharp,
+                                      size: 40,
+                                      color: Colors.blue[600],
+                                    ),
                                   ),
                                   Text('Lain-Lain',
                                       style: GoogleFonts.openSans(
                                         fontSize: 18,
+                                        color: Colors.black54,
+                                        fontStyle: FontStyle.normal,
+                                        fontWeight: FontWeight.bold,
                                       )),
                                 ],
                               ),
