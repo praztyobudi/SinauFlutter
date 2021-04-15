@@ -26,21 +26,36 @@ class _NewsSlideState extends State<NewsSlide> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          alignment: AlignmentDirectional.centerStart,
-          margin: EdgeInsets.symmetric(
-            horizontal: ScreenSize.blockHorizontal * 5,
-          ),
-          padding: EdgeInsets.only(bottom: ScreenSize.blockVertical * 2),
-          child: Text(
-            'Berita Terbaru',
-            style: GoogleFonts.openSans(
-              color: Colors.white,
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
+        Row(
+          children: [
+            Container(
+              alignment: AlignmentDirectional.centerStart,
+              margin: EdgeInsets.symmetric(
+                  horizontal: ScreenSize.blockHorizontal * 5),
+              padding: EdgeInsets.only(bottom: ScreenSize.blockVertical * 2),
+              child: Text(
+                'Berita Terbaru',
+                style: GoogleFonts.openSans(
+                  color: Colors.white,
+                  fontStyle: FontStyle.normal,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
             ),
-          ),
+            Container(
+              alignment: Alignment.centerRight,
+              margin: EdgeInsets.only(left: ScreenSize.blockHorizontal * 35),
+              padding: EdgeInsets.only(bottom: ScreenSize.blockVertical * 1),
+              child: Text(
+                'Lihat Semua',
+                style: GoogleFonts.openSans(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+          ],
         ),
         Container(
           margin: EdgeInsets.only(top: ScreenSize.blockVertical * 47),
@@ -72,7 +87,7 @@ class _NewsSlideState extends State<NewsSlide> {
                           color: Colors.black.withOpacity(0.2),
                           spreadRadius: 1,
                           blurRadius: 2,
-                          offset: Offset(0, 2), //x,y
+                          offset: Offset(0, 1), //x,y
                         )
                       ],
                     ),

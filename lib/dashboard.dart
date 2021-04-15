@@ -1,11 +1,120 @@
 import 'package:flutter/material.dart';
-import 'package:latihanflutter/content/content_1.dart';
-import 'package:latihanflutter/content/home/slides_master.dart';
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:latihanflutter/content/news/news_master.dart';
+import 'package:latihanflutter/content/beranda/slides_master.dart';
+import 'package:latihanflutter/content/info/infoUtama.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:flutter/cupertino.dart';
 
+// import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+// import 'package:latihanflutter/content/content_1.dart';
+class Page1 extends StatefulWidget {
+  @override
+  _Page1State createState() => _Page1State();
+}
+
+List<Widget> _buildScreens() {
+  return [
+    Home(),
+    News(),
+    Text('Akun'),
+    Text('Akun'),
+    Text('konten'),
+  ];
+}
+
+class _Page1State extends State<Page1> {
+  List<PersistentBottomNavBarItem> _navBarsItems() {
+    return [
+      PersistentBottomNavBarItem(
+        icon: Icon(CupertinoIcons.home),
+        title: ("Beranda"),
+        activeColorPrimary: Colors.blue[600],
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+        iconSize: 23,
+        activeColorSecondary: Colors.blue[400],
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(CupertinoIcons.news_solid),
+        title: ("Info"),
+        activeColorPrimary: Colors.blue[600],
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+        iconSize: 23,
+        activeColorSecondary: Colors.blue[400],
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(CupertinoIcons.phone),
+        title: ("Hubungi Kami"),
+        activeColorPrimary: Colors.blue[600],
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+        iconSize: 23,
+        activeColorSecondary: Colors.blue[400],
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(CupertinoIcons.gift),
+        title: ("Tips"),
+        activeColorPrimary: Colors.blue[600],
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+        iconSize: 23,
+        activeColorSecondary: Colors.blue[400],
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(CupertinoIcons.person_circle),
+        title: ("Account"),
+        activeColorPrimary: Colors.blue[600],
+        inactiveColorPrimary: CupertinoColors.systemGrey,
+        iconSize: 23,
+        activeColorSecondary: Colors.blue[400],
+      ),
+    ];
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    PersistentTabController _controller;
+    _controller = PersistentTabController(initialIndex: 0);
+    return PersistentTabView(
+      context,
+      controller: _controller,
+      navBarHeight: 52,
+      screens: _buildScreens(),
+      items: _navBarsItems(),
+      confineInSafeArea: true,
+      backgroundColor: Colors.white, // Default is Colors.white.
+      handleAndroidBackButtonPress: true, // Default is true.
+      resizeToAvoidBottomInset:
+          true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
+      stateManagement: true, // Default is true.
+      hideNavigationBarWhenKeyboardShows:
+          true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
+      decoration: NavBarDecoration(
+          borderRadius: BorderRadius.circular(0),
+          colorBehindNavBar: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.2),
+              spreadRadius: 1,
+              blurRadius: 2,
+              offset: Offset(2, 0), //x,y
+            )
+          ]),
+      popAllScreensOnTapOfSelectedTab: true,
+      popActionScreens: PopActionScreensType.all,
+      itemAnimationProperties: ItemAnimationProperties(
+        // Navigation Bar's items animation properties.
+        duration: Duration(milliseconds: 300),
+        curve: Curves.easeInCirc,
+      ),
+      screenTransitionAnimation: ScreenTransitionAnimation(
+        // Screen transition animation on change of selected tab.
+        animateTabTransition: true,
+        curve: Curves.easeInOut,
+        duration: Duration(milliseconds: 200),
+      ),
+      navBarStyle:
+          NavBarStyle.style3, // Choose the nav bar style with this property.
+    );
+  }
+}
+//================================================= convex_bottom_bar ==
 // class Page1 extends StatefulWidget {
 //   @override
 //   _Page1State createState() => _Page1State();
@@ -75,102 +184,3 @@ import 'package:flutter/cupertino.dart';
 //     );
 //   }
 // }
-class Page1 extends StatefulWidget {
-  @override
-  _Page1State createState() => _Page1State();
-}
-
-List<Widget> _buildScreens() {
-  return [
-    Home(),
-    News(),
-    Text('Akun'),
-    Text('konten'),
-  ];
-}
-
-class _Page1State extends State<Page1> {
-  List<PersistentBottomNavBarItem> _navBarsItems() {
-    return [
-      PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.home),
-        title: ("Home"),
-        activeColorPrimary: Colors.blue[600],
-        inactiveColorPrimary: CupertinoColors.systemGrey,
-        iconSize: 23,
-        activeColorSecondary: Colors.blue[400],
-      ),
-      PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.news_solid),
-        title: ("News"),
-        activeColorPrimary: Colors.blue[600],
-        inactiveColorPrimary: CupertinoColors.systemGrey,
-        iconSize: 23,
-        activeColorSecondary: Colors.blue[400],
-      ),
-      PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.arrow_down_doc),
-        title: ("Content"),
-        activeColorPrimary: Colors.blue[600],
-        inactiveColorPrimary: CupertinoColors.systemGrey,
-        iconSize: 23,
-        activeColorSecondary: Colors.blue[400],
-      ),
-      PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.person_circle),
-        title: ("Account"),
-        activeColorPrimary: Colors.blue[600],
-        inactiveColorPrimary: CupertinoColors.systemGrey,
-        iconSize: 23,
-        activeColorSecondary: Colors.blue[400],
-      ),
-    ];
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    PersistentTabController _controller;
-    _controller = PersistentTabController(initialIndex: 0);
-    return PersistentTabView(
-      context,
-      controller: _controller,
-      navBarHeight: 50,
-      screens: _buildScreens(),
-      items: _navBarsItems(),
-      confineInSafeArea: true,
-      backgroundColor: Colors.white, // Default is Colors.white.
-      handleAndroidBackButtonPress: true, // Default is true.
-      resizeToAvoidBottomInset:
-          true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
-      stateManagement: true, // Default is true.
-      hideNavigationBarWhenKeyboardShows:
-          true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
-      decoration: NavBarDecoration(
-          borderRadius: BorderRadius.circular(0),
-          colorBehindNavBar: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              spreadRadius: 1,
-              blurRadius: 2,
-              offset: Offset(2, 0), //x,y
-            )
-          ]),
-      popAllScreensOnTapOfSelectedTab: true,
-      popActionScreens: PopActionScreensType.all,
-      itemAnimationProperties: ItemAnimationProperties(
-        // Navigation Bar's items animation properties.
-        duration: Duration(milliseconds: 300),
-        curve: Curves.easeInCirc,
-      ),
-      screenTransitionAnimation: ScreenTransitionAnimation(
-        // Screen transition animation on change of selected tab.
-        animateTabTransition: true,
-        curve: Curves.easeInOut,
-        duration: Duration(milliseconds: 200),
-      ),
-      navBarStyle:
-          NavBarStyle.style3, // Choose the nav bar style with this property.
-    );
-  }
-}

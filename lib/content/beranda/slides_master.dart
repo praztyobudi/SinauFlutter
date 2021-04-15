@@ -1,12 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:latihanflutter/content/home/menus.dart';
-import 'package:latihanflutter/content/home/news_slide.dart';
+import 'package:latihanflutter/content/beranda/menus.dart';
+import 'package:latihanflutter/content/beranda/berita_slide.dart';
 
 import 'package:latihanflutter/src/screensize.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:latihanflutter/content/home/news_slide.dart' show NewsSlide;
+import 'package:latihanflutter/content/beranda/berita_slide.dart'
+    show NewsSlide;
 
 class Home extends StatefulWidget {
   @override
@@ -80,8 +81,17 @@ class _HomeState extends State<Home> {
                             horizontal: ScreenSize.blockHorizontal * 2,
                             vertical: ScreenSize.blockVertical * 1),
                         decoration: BoxDecoration(
-                            color: Colors.black,
-                            borderRadius: BorderRadius.circular(10)),
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              spreadRadius: 1,
+                              blurRadius: 2,
+                              offset: Offset(0, 2), //x,y
+                            ),
+                          ],
+                        ),
                         child: Stack(
                           children: [
                             ClipRRect(

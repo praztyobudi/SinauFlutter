@@ -20,12 +20,12 @@ class _MenusState extends State<Menus> {
             maxChildSize: 1,
             builder: (BuildContext context, myController) {
               return Container(
-                margin: EdgeInsets.only(top: ScreenSize.blockVertical * 7),
+                margin: EdgeInsets.only(top: ScreenSize.blockVertical * 6.5),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),
-                      topRight: Radius.circular(20)),
-                  color: Colors.white,
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10)),
+                  color: Color.fromRGBO(252, 252, 252, 1.0),
                 ),
                 child: SingleChildScrollView(
                   controller: myController,
@@ -51,13 +51,13 @@ class _MenusState extends State<Menus> {
                         alignment: Alignment.topCenter,
                         margin: EdgeInsets.only(
                           left: ScreenSize.blockHorizontal * 5,
-                          top: ScreenSize.blockVertical * 3,
+                          top: ScreenSize.blockVertical * 2,
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                              height: ScreenSize.blockVertical * 19,
+                              height: ScreenSize.blockVertical * 20,
                               width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -96,7 +96,7 @@ class _MenusState extends State<Menus> {
                             Container(
                               margin: EdgeInsets.only(
                                   left: ScreenSize.blockHorizontal * 6),
-                              height: ScreenSize.blockVertical * 19,
+                              height: ScreenSize.blockVertical * 20,
                               width: ScreenSize.blockHorizontal * 42,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
