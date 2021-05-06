@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:latihanflutter/src/screensize.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:latihanflutter/content/beranda/berita_semua_slide.dart';
+import 'package:sizer/sizer.dart';
 
 class NewsSlide extends StatefulWidget {
   @override
@@ -26,42 +27,54 @@ class _NewsSlideState extends State<NewsSlide> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Row(
-          children: [
-            Container(
-              alignment: AlignmentDirectional.centerStart,
-              margin: EdgeInsets.symmetric(
-                  horizontal: ScreenSize.blockHorizontal * 5),
-              padding: EdgeInsets.only(bottom: ScreenSize.blockVertical * 2),
-              child: Text(
-                'Berita Terbaru',
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
-                  fontStyle: FontStyle.normal,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
+        Container(
+          alignment: Alignment.centerLeft,
+          margin: EdgeInsets.only(
+            left: 5.w,
+          ),
+          padding: EdgeInsets.only(
+            bottom: 2.h,
+          ),
+          child: Text(
+            'Berita Terbaru',
+            style: GoogleFonts.roboto(
+              color: Colors.white,
+              fontStyle: FontStyle.normal,
+              fontWeight: FontWeight.bold,
+              fontSize: 14.sp,
             ),
-            Container(
-              alignment: Alignment.centerRight,
-              margin: EdgeInsets.only(left: ScreenSize.blockHorizontal * 35),
-              padding: EdgeInsets.only(bottom: ScreenSize.blockVertical * 1),
-              child: Text(
-                'Lihat Semua',
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
-                  fontSize: 15,
-                ),
-              ),
-            ),
-          ],
+          ),
         ),
         Container(
-          margin: EdgeInsets.only(top: ScreenSize.blockVertical * 47),
+          alignment: Alignment.centerRight,
+          margin: EdgeInsets.only(
+            right: 3.w,
+          ),
+          padding: EdgeInsets.only(
+            bottom: 1.h,
+          ),
+          child: TextButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => BeritaSemuaSlide(),
+                ),
+              );
+            },
+            child: Text(
+              'Lihat Semua',
+              style: GoogleFonts.openSans(
+                color: Colors.white,
+                fontSize: 11.sp,
+              ),
+            ),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(top: 51.h),
           child: CarouselSlider(
             options: CarouselOptions(
-              height: ScreenSize.blockVertical * 15,
+              height: 16.h,
               aspectRatio: 20,
               viewportFraction: 1.0,
               disableCenter: true,
@@ -76,9 +89,10 @@ class _NewsSlideState extends State<NewsSlide> {
                   return Container(
                     width: MediaQuery.of(context).size.width,
                     margin: EdgeInsets.symmetric(
-                        horizontal: ScreenSize.blockHorizontal * 5,
-                        vertical: ScreenSize.blockVertical * 1),
-                    padding: EdgeInsets.only(top: ScreenSize.blockVertical * 1),
+                      horizontal: 5.w,
+                      vertical: 1.w,
+                    ),
+                    padding: EdgeInsets.only(top: 1.5.h),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -96,8 +110,8 @@ class _NewsSlideState extends State<NewsSlide> {
                       children: [
                         Padding(
                           padding: EdgeInsets.only(
-                            bottom: ScreenSize.blockVertical * 1,
-                            left: ScreenSize.blockHorizontal * 4,
+                            bottom: 1.h,
+                            left: 4.w,
                           ),
                           child: Icon(
                             Icons.error_outline,
@@ -110,14 +124,14 @@ class _NewsSlideState extends State<NewsSlide> {
                             Container(
                               alignment: Alignment.centerLeft,
                               padding: EdgeInsets.only(
-                                  left: ScreenSize.blockHorizontal * 2,
-                                  top: ScreenSize.blockVertical * 1.2),
+                                left: 2.w,
+                                top: 1.2.h,
+                              ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-                                    margin: EdgeInsets.only(
-                                        bottom: ScreenSize.blockVertical * 1),
+                                    margin: EdgeInsets.only(bottom: 1.h),
                                     child: Text(i[0],
                                         maxLines: 1,
                                         style: TextStyle(
