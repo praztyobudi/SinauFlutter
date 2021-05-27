@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:latihanflutter/content/beranda/berita_semua_slide.dart';
+import 'package:latihanflutter/view/content/beranda/berita_semua_slide.dart';
 import 'package:sizer/sizer.dart';
 
 class NewsSlide extends StatefulWidget {

@@ -8,13 +8,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.5.0"
-  badges:
-    dependency: "direct main"
-    description:
-      name: badges
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -57,13 +50,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.15.0"
-  convex_bottom_bar:
-    dependency: "direct main"
-    description:
-      name: convex_bottom_bar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.0.0"
   crypto:
     dependency: transitive
     description:
@@ -116,6 +102,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  get:
+    dependency: "direct main"
+    description:
+      name: get
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.1.4"
   google_fonts:
     dependency: "direct main"
     description:

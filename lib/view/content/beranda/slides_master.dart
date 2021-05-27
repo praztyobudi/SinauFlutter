@@ -1,11 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:latihanflutter/content/beranda/menus.dart';
-import 'package:latihanflutter/content/beranda/berita_slide.dart';
+import 'package:latihanflutter/view/content/beranda/menus.dart';
+import 'package:latihanflutter/view/content/beranda/berita_slide.dart';
 import 'package:sizer/sizer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:latihanflutter/content/beranda/berita_slide.dart'
+import 'package:latihanflutter/view/content/beranda/berita_slide.dart'
     show NewsSlide;
 
 class Home extends StatefulWidget {

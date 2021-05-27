@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:latihanflutter/src/screensize.dart';
+import 'package:latihanflutter/view/src/screensize.dart';
 import 'package:flutter/cupertino.dart';
 
 class Menus extends StatefulWidget {

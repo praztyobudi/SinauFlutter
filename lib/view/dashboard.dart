@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latihanflutter/content/beranda/slides_master.dart';
-import 'package:latihanflutter/content/info/infoUtama.dart';
+import 'package:latihanflutter/view/content/beranda/slides_master.dart';
+import 'package:latihanflutter/view/content/info/infoUtama.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:flutter/cupertino.dart';
 

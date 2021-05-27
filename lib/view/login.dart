@@ -2,10 +2,12 @@ import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:latihanflutter/src/screensize.dart';
+import 'package:latihanflutter/view/src/screensize.dart';
 import 'package:date_time_picker/date_time_picker.dart';
-import 'package:latihanflutter/dashboard.dart';
+import 'package:latihanflutter/view/dashboard.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -213,31 +215,34 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 15,
                   )),
             ),
-            Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                      top: ScreenSize.blockVertical * 5,
-                      left: ScreenSize.blockHorizontal * 82),
-                  child: Text(
-                    'Skip',
-                    style: GoogleFonts.openSans(
-                      color: Colors.white,
-                      fontSize: 18,
+            Container(
+              margin: EdgeInsets.only(
+                top: 3.h,
+              ),
+              alignment: Alignment.topRight,
+              child: TextButton(
+                onPressed: () {
+                  Get.toNamed('/home');
+                },
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Skip',
+                      style: GoogleFonts.openSans(
+                        color: Colors.white,
+                        fontSize: 18,
+                      ),
                     ),
-                  ),
+                    Icon(
+                      Icons.arrow_forward_ios_outlined,
+                      color: Colors.white,
+                      size: 18,
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: ScreenSize.blockVertical * 5,
-                  ),
-                  child: Icon(
-                    Icons.arrow_forward_ios_outlined,
-                    color: Colors.white,
-                    size: 18,
-                  ),
-                ),
-              ],
+              ),
             )
             // Container(
             //   alignment: AlignmentDirectional.topEnd,
